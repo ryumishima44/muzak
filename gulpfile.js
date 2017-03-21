@@ -61,49 +61,9 @@ gulp.task('serve',function(){
     });
     gulp.watch('./src/css/*.scss',['css']);
     gulp.watch('./src/**/*.js',['js']);
-    gulp.watch('./src/img/**/*',['img']);
+    gulp.watch('./src/img/**/*.{png,jpeg,jpg,svg,gif}', ['img']);
     gulp.watch('./src/**/*.html',['html']);
 });
 
 
 gulp.task('default',['clean','css','js','img','html','serve']);
-
-
-
-// gulp.task('styles', function() {
-//   return sass('src/css/*.scss', { style: 'expanded' })
-//     .pipe(autoprefixer('last 2 version'))
-//     .pipe(rename({suffix: '.min'}))
-//     .pipe(cssnano())
-//     .pipe(gulp.dest('dist/css'))
-//     .pipe(notify({ message: 'Styles task complete' }))
-//     .pipe(browserSync.stream());;
-// });
-
-// gulp.task('scripts', function() {
-//     gulp.src('src/js/**/*.js')
-//     .pipe(concat('main.js'))
-//     .pipe(rename({suffix: '.min'}))
-//     .pipe(uglify())
-//     .pipe(gulp.dest('dist/js'))
-//     .pipe(notify({ message: 'Scripts task complete' }));
-// });
-
-
-
-
-
-// gulp.task('serve',function(){
-//     browserSync.init({
-//         server:"dist"
-//     })
-
-//     gulp.watch('src/css/**/*.scss', ['styles']);
-//     gulp.watch('src/js/**/*.js', ['scripts']);
-//     gulp.watch('src/img/**/*', ['images']);
-//     gulp.watch('src/**/*.html,src/js/**/*.js').on('change',browserSync.reload);
-// });
-
-// gulp.task('default', ['clean'], function() {
-//     gulp.start('styles', 'scripts', 'images');
-// });

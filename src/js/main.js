@@ -1,1 +1,3 @@
-alert('this is the jsa braisoler,aqss!');
+(function(){
+    //add your code here papu
+})();
