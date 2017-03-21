@@ -1,0 +1,9 @@
+# ignore all logs
+*.log
+
+# Ignore docs files
+.sass-cache
+.sass-cache/*
+
+# Ignore docs files
+node_modules

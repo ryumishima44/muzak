@@ -1,0 +1,33 @@
+{
+  "name": "muzak",
+  "version": "1.0.0",
+  "description": "Musician directory",
+  "main": "dist/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryumishima44/muzak.git"
+  },
+  "author": "Francisco Sanchez M",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ryumishima44/muzak/issues"
+  },
+  "homepage": "https://github.com/ryumishima44/muzak#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.8",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-cache": "^0.4.6",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-notify": "^3.0.0",
+    "gulp-ruby-sass": "^2.1.1",
+    "gulp-uglify": "^2.1.0",
+    "jshint": "^2.9.4"
+  }
+}

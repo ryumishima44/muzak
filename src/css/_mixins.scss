@@ -1,0 +1,31 @@
+@mixin gradient-background($direction,$color1,$color2){
+    background: linear-gradient($direction,$color1, $color2);
+}
+
+
+//Responsive mixins
+@mixin respond-to($media) {
+  @if $media == mobile {
+    @media only screen and (max-width: $screen-sm - 1) { @content; }
+  }
+  @if $media == mobile-landscape{
+    @media only screen and (min-width: 321px) and (max-width:$screen-sm - 1) and (min-aspect-ratio: 13/9) { @content; }
+  }
+  @else if $media == sm-tablet {//Tablet portrait
+    @media only screen and (min-width: $screen-sm) and (max-width: $screen-md - 1){ @content; }
+  }
+  @else if $media == mobile/tablet {
+  	@media only screen and (max-width: $screen-xs-max) { @content; }
+  }
+  @else if $media == tablet/desktop {
+    @media only screen and (min-width: $screen-sm) { @content; }
+  }
+  @else if $media == desktop {
+    @media only screen and (min-width: $screen-md) { @content; }
+  }@else if $media == lessThanLarge {
+    @media only screen and (max-width: $screen-lg-min) { @content; }
+  }@else if $media == xs { //iphone 5
+    @media only screen and (max-width: 320px) { @content; }
+  }
+
+}

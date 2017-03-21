@@ -1,0 +1,7 @@
+body{
+    @include gradient-background(to top,$bg-color1,$bg-color2);
+}
+
+#logo{
+    max-width: 20%;
+}
