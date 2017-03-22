@@ -1,4 +1,4 @@
-var routerApp=angular.module('app',['ui.router']);
+var routerApp=angular.module('muzak',['ui.router']);
 
 routerApp.config(function($stateProvider, $urlRouterProvider){
 		
@@ -7,12 +7,11 @@ routerApp.config(function($stateProvider, $urlRouterProvider){
 		$stateProvider
 		.state('home', {
 			url: '/home',
-			templateUrl: '/public/home.html'
+			templateUrl: '/views/home.html'
 		})
 
 		.state('about',{
 			url:'/about',
-			templateUrl:'/public/about.html'
-
+			templateUrl:'/views/about.html'
 		});
 });

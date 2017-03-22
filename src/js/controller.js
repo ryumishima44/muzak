@@ -1,9 +1,8 @@
 (function(){
-    'use strict';
 
-    angular.module("app").controller('MainController',controladorMuzak);
+    angular.module("muzak").controller('MainController',controladorMuzak);
 
-    controladorMuzak.$inject=['muzakService']
+    controladorMuzak.$inject=['muzakService'];
 
     function controladorMuzak(service){
         var vm=this;
@@ -11,13 +10,10 @@
 
         service.fetchMuzak()
         .then(function(Muzak){
-            vm.toDos=Muzak.data;
+            vm.Muzak=Muzak.data;
         })
         .catch(function(error){
-            console.log('se fue a la versh')
+            console.log('se fue a la versh');
         });
-
     }
-
-
 }());

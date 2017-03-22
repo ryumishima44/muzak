@@ -10,8 +10,10 @@ var gulp = require('gulp'),
     notify = require('gulp-notify'),
     cache = require('gulp-cache'),
     browserSync = require('browser-sync').create(),
-    reload = browserSync.reload;
-    del = require('del');
+    reload = browserSync.reload,
+    del = require('del')
+    jshint = require('gulp-jshint');
+
 
 
 gulp.task('css',function(){
@@ -27,9 +29,11 @@ gulp.task('css',function(){
 
 gulp.task('js',function(){
     gulp.src('./src/js/**.js')
-        .pipe(concat('main.js'))
-        .pipe(rename({suffix: '.min'}))
-        .pipe(uglify())
+        .pipe(jshint())
+        .pipe(jshint.reporter('default'))
+        // .pipe(concat('main.js'))
+        // .pipe(rename({suffix: '.min'}))
+        // .pipe(uglify())
         .pipe(gulp.dest('dist/js'))
         .pipe(notify({ message: 'Scripts task complete' }))
         .pipe(browserSync.reload({stream:true}));
