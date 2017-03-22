@@ -7,11 +7,11 @@ routerApp.config(function($stateProvider, $urlRouterProvider){
 		$stateProvider
 		.state('home', {
 			url: '/home',
-			templateUrl: '/home.html'
+			templateUrl: 'views/home.html'
 		})
 
 		.state('about',{
 			url:'/about',
-			templateUrl:'/about.html'
+			templateUrl:'views/about.html'
 		});
 });
