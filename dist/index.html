@@ -20,6 +20,7 @@
     <script src="./js/modules.js"></script>
     <script src="./js/service.js"></script>
     <script src="./js/controller.js"></script>
+    <script src="./js/routere.js"></script>
     <script src="./js/main.js"></script>
 </head>
 <body>
@@ -36,8 +37,8 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li ui-sref="home" class="active">Home</li>
-            <li ui-sref="about">About</li>
+            <li class="active"><button class="navbar-btn" ui-sref="home">Get in<span class="sr-only">(current)</span></button></li>
+            <li><button class="navbar-btn buttonav" ui-sref="about">About</button></li>
             <li><a href="#contact">Contact</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
@@ -58,9 +59,7 @@
     <div class="container theme-showcase" role="main">
       <div class="jumbotron">
         THIS IS THE REAL BARRABASADA
-        <div ng-controller="MainController as vm">
-          {{vm.msj}}
-        </div>
+        <div ui-view></div>
       </div>
     </div>
 </body>
