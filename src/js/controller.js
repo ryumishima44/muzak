@@ -10,7 +10,7 @@
 
         service.fetchMuzak()
         .then(function(Muzak){
-            vm.Muzak=Muzak.data;
+            vm.users=Muzak.data;
         })
         .catch(function(error){
             console.log('se fue a la versh');
